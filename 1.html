@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child {
+            color: red;
+        }
+
+        /* @media screen and (min-width: 960px){
+            body{
+            background-color:#FF6699
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            body{
+            background-color:#00FF66;
+            }
+        }
+
+        @media screen and (min-width: 550px){
+            body{
+            background-color:#6633FF;
+            }
+        } */
+
+        @media screen and (max-width: 960px) {
+            body {
+                background-color: #FF6699
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: #00FF66;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            body {
+                background-color: #6633FF;
+            }
+        }
+
+
+
+        /* @media screen and (max-width: 320px){
+    body{
+      background-color:#FFFF00;
+    }
+} */
+    </style>
+    <style>
+
+        .outer {
+            border: 5px dotted rgb(214,129,137);
+            border-radius: 5px;
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+            
+        .float {
+            padding: 10px;
+            border: 5px solid rgba(214,129,137,.4);
+            border-radius: 5px;
+            background-color: rgba(233,78,119,.4);
+            color: #fff;
+            float: left;  
+            width: 200px;
+            margin: 0 20px 0 0;
+        }
+        .test{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="a">5</span>
+        <p class="b">2</p>
+        <span>5</span>
+        <p>3</p>
+        <p>4</p>
+    </div>
+
+    <div class="outer">
+        <div class="float">I am a floated element.sss</div>
+        <div class="test">ok i am handsome</div>
+        <div>ok i am handsome</div>
+        <div>ok i am handsome</div>
+        <div>ok i am handsome</div>
+        <!-- <div class="test"></div> -->
+    </div>
+    
+
+    <script>
+
+    function* gen() {
+        const num1 = yield 1
+        console.log(num1)
+        const num2 = yield 2
+        console.log(num2)
+        return 3
+    }
+    const g = gen()
+    console.log(g.next()) // { value: 1, done: false }
+    console.log(g.next(11111))
+    // 11111
+    //  { value: 2, done: false }
+    console.log(g.next(22222)) 
+    // 22222
+    // { value: 3, done: true }
+    console.log(Symbol)
+    </script>
+</body>
+
+</html>
